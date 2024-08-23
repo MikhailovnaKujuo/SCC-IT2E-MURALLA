@@ -23,5 +23,3 @@ public class Grades {
                 this.id, this.name, this.p, this.m, this.pf, this.f, average, remarks);
     }
 }
-
-}
