@@ -21,15 +21,31 @@ public class Muralla2E {
 //            grade.viewGrades();
 //        }
         
-        Products[] pr = new Products[2];
-        pr[0] = new Products();
-        pr[1] = new Products();
+        System.out.print("Enter Number of Products: ");
+        int np = scan.nextInt();
         
-        pr[0].addProducts(1001, "Kopiko", 13, 20, 3);
-        pr[1].addProducts(1002, "Coke", 500, 0, 10);
+        Products[] pr = new Products[np];
         
-        for (Products prod : pr) {
-            prod.viewProducts();
+        for (int i = 0; i < np; i++){
+            pr[i] = new Products();
+            
+            System.out.println("Enter Details for Product " + (i + 1));
+            System.out.print("ID: ");
+            int id = scan.nextInt();
+            System.out.print("Name: ");
+            String name = scan.next();
+            System.out.print("Price: ");
+            double price = scan.nextDouble();
+            System.out.print("Stocks: ");
+            int stocks = scan.nextInt();
+            System.out.print("Sold: ");
+            int sold = scan.nextInt();
+            
+            pr[i].addProducts(id, name, price, stocks, sold);
+        }
+        
+        for (int i = 0; i < pr.length; i++) {
+            pr[i].viewProducts();
         }  
         
     }   
