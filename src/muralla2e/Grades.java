@@ -6,7 +6,7 @@ public class Grades {
     int id;
     double p, m, pf, f, average;
     
-    public void addGrades(String name, int id, double p, double m, double pf, double f){
+    public Grades(String name, int id, double p, double m, double pf, double f){
         this.id = id;
         this.name = name;
         this.p = p;

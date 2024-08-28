@@ -8,12 +8,12 @@ public class Muralla2E {
         
         Scanner scan = new Scanner(System.in);
         Sales sell = new Sales();    
-//        sell.get_sales();
         
-//        Product pr = new Product();
-//        pr.getProducts();
+        Inputs input = new Inputs();
         
-        Grade gr = new Grade();
-        gr.getGrades();
+        input.getGrades();
+        
+//        input.getProducts();
+        
     }   
 }
