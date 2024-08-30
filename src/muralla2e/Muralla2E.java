@@ -7,14 +7,34 @@ public class Muralla2E {
     public static void main(String[] args) {
         
         Scanner scan = new Scanner(System.in);
-        Sales sell = new Sales(); 
-//        sell.get_sales();
-        
+        Sales sell = new Sales();           
         Inputs input = new Inputs();
         
-        input.getGrades();
+        int choice;
         
-//        input.getProducts();
-        
+        do {
+            System.out.println("1. Sales\n2. Grades\n3. Products");
+            System.out.print("Choice: ");
+            choice = scan.nextInt();
+            System.out.println("");
+            
+            switch (choice) {
+                case 0:
+                    break;
+                case 1: 
+                    sell.get_sales();
+                    break;
+                case 2:
+                    input.getGrades();
+                    break;
+                case 3:
+                    input.getProducts();
+                    break;
+                default:
+                    System.out.println("????????\n");
+                    break;
+            }
+        } while (choice > 3 || choice < 0);
+          
     }   
 }

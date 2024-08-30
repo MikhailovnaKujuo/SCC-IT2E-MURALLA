@@ -30,10 +30,20 @@ public class Inputs {
             
             pr[i] = new Products(id, name, price, stocks, sold);
         }
+        double totalProfit = 0, totalTep = 0;
         
-        for (int i = 0; i < pr.length; i++) {
-            pr[i].viewProducts();
+        System.out.printf("%-10s %-10s %-10s %-10s %-10s %-10s %-10s %-10s\n", 
+                "ID", "Name", "Price", "Stocks", "Sold", "Profit", "TEP", "Status");
+        for (Products pr1 : pr) {
+            pr1.viewProducts();
+            totalProfit += pr1.profit;
+            totalTep += pr1.tep;
         }  
+        System.out.println("");
+        System.out.println("---------------------------------");
+        System.out.printf("Total Profits: %.2f\n", totalProfit);
+        System.out.printf("Total Estimate Price: %.2f\n", totalTep);
+        
     }
     
     public void getGrades(){
