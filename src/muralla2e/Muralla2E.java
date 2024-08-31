@@ -34,7 +34,9 @@ public class Muralla2E {
                     System.out.println("????????\n");
                     break;
             }
-        } while (choice > 3 || choice < 0);
+            
+            System.out.println("");          
+        } while (choice != 0);
           
     }   
 }
