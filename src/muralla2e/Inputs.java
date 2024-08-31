@@ -1,17 +1,16 @@
 package muralla2e;
 
-import java.util.Scanner;
+import java.util.*;
 
 public class Inputs {
     
     Scanner scan = new Scanner(System.in);
+    ArrayList<Products> pr = new ArrayList<>();
     
     public void getProducts(){
         
         System.out.print("Enter Number of Products: ");
         int np = scan.nextInt();
-        
-        Products[] pr = new Products[np];
         
         for (int i = 0; i < np; i++){
                        
@@ -28,7 +27,8 @@ public class Inputs {
             int sold = scan.nextInt();
             System.out.println("");
             
-            pr[i] = new Products(id, name, price, stocks, sold);
+            pr.add(new Products(id, name, price, stocks, sold));
+            
         }
         double totalProfit = 0, totalTep = 0;
         
@@ -42,7 +42,7 @@ public class Inputs {
         System.out.println("");
         System.out.println("---------------------------------");
         System.out.printf("Total Profits: %.2f\n", totalProfit);
-        System.out.printf("Total Estimate Price: %.2f\n", totalTep);
+        System.out.printf("Total Estimate Profit: %.2f\n", totalTep);
         
     }
     
