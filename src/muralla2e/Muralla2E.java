@@ -8,7 +8,8 @@ public class Muralla2E {
         
         Scanner scan = new Scanner(System.in);
         Sales sell = new Sales();           
-        Inputs input = new Inputs();
+        Product pr = new Product();
+        Grade gr = new Grade();
         
         int choice;
         
@@ -25,10 +26,10 @@ public class Muralla2E {
                     sell.get_sales();
                     break;
                 case 2:
-                    input.getGrades();
+                    gr.getGrades();
                     break;
                 case 3:
-                    input.getProducts();
+                    pr.getProducts();
                     break;
                 default:
                     System.out.println("????????\n");
