@@ -10,10 +10,11 @@ public class Muralla2E {
         Sales sell = new Sales();           
         Product pr = new Product();
         Grade gr = new Grade();
+        Account acc = new Account();
         
         int choice;
         
-        System.out.println("1. Sales\n2. Grades\n3. Products");
+        System.out.println("1. Sales\n2. Grades\n3. Products\n4. Accounts");
         System.out.print("Choice: ");
         choice = scan.nextInt();
         System.out.println("");
@@ -29,6 +30,9 @@ public class Muralla2E {
                 break;
             case 3:
                 pr.getProducts();
+                break;
+            case 4:
+                acc.getAccount();
                 break;
             default:
                 System.out.println("????????\n");
