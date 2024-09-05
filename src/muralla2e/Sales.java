@@ -2,39 +2,36 @@ package muralla2e;
 
 import java.util.Scanner;
 
-
 public class Sales {
-    public void get_sales(){
-        Scanner input = new Scanner(System.in);
-        
-        String name, product_name;
-        float qty, price, cash, total;
-        
-        System.out.print("Enter Customer Name: ");
-        name = input.nextLine();
-        System.out.print("Enter Product Name: ");
-        product_name = input.nextLine();
-        System.out.print("Enter Quantity: ");
-        qty = input.nextFloat();
-        System.out.print("Enter Price: ");
-        price = input.nextFloat();
-        System.out.print("Enter Cash: ");
-        cash = input.nextFloat();
-        
-        total = price * qty;
+    String name;
+    String prodName;
+    double quality, price, cash, total, change;
+    
+    public void addSale(String name, String pname, double qty, double price, double cash, double total){
+        this.name = name;
+        this.prodName = pname;
+        this.quality = qty;
+        this.price = price;
+        this.cash = cash;
+        this.total = total;
+    }
+    
+    public void viewReceipt(){
+        change = cash - total;
         
         System.out.println("--------------------------------");
         System.out.println("\tRECEIPT");
         System.out.println("--------------------------------");
         
-        System.out.println("Name: " + name);
-        System.out.println("\nItem Name: " + product_name);
-        System.out.println(String.format("Quantity: %.0f", qty));
+        System.out.println("Customer Name: " + name);
+        System.out.println("\nItem Name: " + prodName);
+        System.out.printf("Quantity: %.0f\n", quality);
+        System.out.printf("Unit Price: %.2f\n", price);
         System.out.println("--------------------------------");
         
-        System.out.println(String.format("Total Due: %.2f", total));
-        System.out.println(String.format("Cash: %.2f", cash));
+        System.out.printf("Total Due: %.2f\n", total);
+        System.out.printf("Cash: %.2f\n", cash);
         System.out.println("--------------------------------");
-        System.out.println(String.format("Change: %.2f", (cash - total)));
+        System.out.printf("Change: %.2f\n", change);
     }
 }

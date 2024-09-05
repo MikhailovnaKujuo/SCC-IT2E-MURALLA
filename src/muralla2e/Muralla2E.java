@@ -7,7 +7,7 @@ public class Muralla2E {
     public static void main(String[] args) {
         
         Scanner scan = new Scanner(System.in);
-        Sales sell = new Sales();           
+        Sale sell = new Sale();           
         Product pr = new Product();
         Grade gr = new Grade();
         Account acc = new Account();
